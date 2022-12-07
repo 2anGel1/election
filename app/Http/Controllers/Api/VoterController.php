@@ -39,11 +39,11 @@ class VoterController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+    //  * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $validate = $request->filled(['name', 'surname', 'candidat_id', 'code']);
+        $validate = $request->filled(['candidat_id', 'code']);
 
         if($validate){
 
@@ -55,8 +55,6 @@ class VoterController extends Controller
 
                     if($code->validity == 0){
                         $voter = new Voter;
-                        $voter->name = $request->name;
-                        $voter->surname = $request->surname;
                         $voter->candidat_id = $request->candidat_id;
                         $voter->save();
 
