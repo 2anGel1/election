@@ -15,8 +15,6 @@ return new class extends Migration
     {
         Schema::create('voters', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->string("surname");
             $table->bigInteger("candidat_id")->unsigned()->nullable(false);
             $table->timestamps();
 
