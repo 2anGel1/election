@@ -23,6 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('/codes', CodeController::class);
+Route::get('codes/exportcodes', [CodeController::class, 'exportCodes']);
 
 Route::apiResource('/voters', VoterController::class);
 

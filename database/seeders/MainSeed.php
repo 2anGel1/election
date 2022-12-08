@@ -33,5 +33,17 @@ class MainSeed extends Seeder
                 'voter_id' => null
             ]);
         }
+
+        Candidat::create([
+            'name' => 'Fofana',
+            'surname' => 'Moamed'
+        ]);
+
+        Candidat::create([
+            'name' => 'Mensa',
+            'surname' => 'Luc'
+        ]);
+
+
     }
 }
